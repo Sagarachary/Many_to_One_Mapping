@@ -1,0 +1,25 @@
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- DB connection -->
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ManyToOneDB</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Sagar@166</property>
+
+        <!-- Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+
+        <!-- Mapped entity class -->
+        <mapping class="com.example.m2o.entity.Department"/>
+    <mapping class="com.example.m2o.entity.Employee"/>
+
+        
+
+    </session-factory>
+</hibernate-configuration>
